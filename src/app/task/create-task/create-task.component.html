@@ -1,1 +1,40 @@
-<p>create-task works!</p>
+<div class="grid grid-cols-3 gap-4">
+  <div>
+    <nb-card status="danger">
+      <nb-card-header>Não Iniciado</nb-card-header>
+      <div class="h-auto max-h-80 overflow-y-auto">
+        <nb-card-body>
+          <div *ngFor="let task of getTaskBySituacao('nao iniciado')">
+            <h3>{{ task.nome }}</h3>
+            <p>{{ task.descricao }}</p>
+            <p>Situação: {{ task.situacao }}</p>
+          </div>
+        </nb-card-body>
+      </div>
+    </nb-card>
+  </div>
+  <div>
+    <nb-card>
+      <nb-card-header>Em Andamento</nb-card-header>
+      <nb-list class="h-auto max-h-80 overflow-y-auto">
+        <nb-list-item *ngFor="let task of getTaskBySituacao('em andamento')">
+          <p>{{task.nome}}</p> <br>
+          <p>{{task.descricao}}</p> <br>
+          <p>{{task.situacao}}</p> <br>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </div>
+  <div>
+    <nb-card>
+      <nb-card-header>Finalizadas</nb-card-header>
+      <nb-list class="h-auto max-h-80 overflow-y-auto">
+        <nb-list-item *ngFor="let task of getTaskBySituacao('finalizada')">
+          <p>{{task.nome}}</p> <br>
+          <p>{{task.descricao}}</p> <br>
+          <p>{{task.situacao}}</p> <br>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </div>
+</div>

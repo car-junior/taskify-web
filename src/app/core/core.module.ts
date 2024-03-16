@@ -1,15 +1,11 @@
-import {HeaderComponent} from "./components/layout/header/header.component";
-import {SidebarComponent} from "./components/layout/sidebar/sidebar.component";
-import {ColumnComponent} from "./components/layout/column/column.component";
 import {NgModule, Optional, SkipSelf} from "@angular/core";
 import {NebularModule} from "../nebular/nebular.module";
 import {RouterModule} from "@angular/router";
 import {CommonModule} from "@angular/common";
+import { LayoutComponent } from './components/layout/layout.component';
 
 const COMPONENTS = [
-  HeaderComponent,
-  ColumnComponent,
-  SidebarComponent
+  LayoutComponent
 ];
 
 const MODULES = [

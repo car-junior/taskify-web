@@ -11,10 +11,9 @@ import {NebularModule} from "./nebular/nebular.module";
     AppComponent,
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
-    NebularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

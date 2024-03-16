@@ -2,7 +2,7 @@ import {
   NbActionsModule,
   NbButtonModule,
   NbCardModule, NbIconModule,
-  NbLayoutModule,
+  NbLayoutModule, NbListModule,
   NbSidebarModule,
   NbThemeModule
 } from "@nebular/theme";
@@ -12,12 +12,13 @@ import {NgModule} from "@angular/core";
 const MODULES = [
   NbThemeModule.forRoot(),
   NbLayoutModule,
-  NbSidebarModule.forRoot(), // NbSidebarModule.forRoot(), //if this is your app.module
   NbButtonModule,
   NbActionsModule,
   NbCardModule,
   NbEvaIconsModule,
-  NbIconModule
+  NbIconModule,
+  NbSidebarModule.forRoot(),
+  NbListModule
 ]
 
 @NgModule({
