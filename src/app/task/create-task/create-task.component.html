@@ -1,14 +1,23 @@
 <div class="grid grid-cols-3 gap-4">
   <div>
-    <nb-card status="danger">
-      <nb-card-header>Não Iniciado</nb-card-header>
-      <div class="h-auto max-h-80 overflow-y-auto">
+    <nb-card>
+      <nb-card-header class="bg-not-started border-none-card-header">Não Iniciado</nb-card-header>
+      <div class="h-auto max-h-screen overflow-y-auto bg-not-started">
         <nb-card-body>
-          <div *ngFor="let task of getTaskBySituacao('nao iniciado')">
+          <div
+            class="bg-card-task mt-4 mx-4 p-2 rounded-lg min-h-40"
+            *ngFor="let task of getTaskBySituacao('nao iniciado')"
+          >
             <h3>{{ task.nome }}</h3>
             <p>{{ task.descricao }}</p>
-            <p>Situação: {{ task.situacao }}</p>
           </div>
+          <div class="mt-4 mx-4">
+            <button class="button-card button-card-not-started flex items-center justify-center">
+              <nb-icon icon="plus-outline"></nb-icon>
+              <span class="ml-2">Add Nova Tarefa</span>
+            </button>
+          </div>
+
         </nb-card-body>
       </div>
     </nb-card>

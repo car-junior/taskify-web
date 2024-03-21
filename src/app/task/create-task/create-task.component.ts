@@ -5,7 +5,7 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './create-task.component.html',
   styleUrl: './create-task.component.css'
 })
-export class CreateTaskComponent implements OnInit{
+export class CreateTaskComponent implements OnInit {
   tasks = [
     // Primeira instância com 5 elementos
     new Task("Tarefa 1", "Descrição da Tarefa 1", "em andamento"),
@@ -23,15 +23,6 @@ export class CreateTaskComponent implements OnInit{
     new Task("Tarefa 13", "Descrição da Tarefa 10", "nao iniciado"),
     new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
     new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
-    new Task("Tarefa 10", "Descrição da Tarefa 10", "nao iniciado"),
 
     // Terceira instância com 3 elementos
     new Task("Tarefa 11", "Descrição da Tarefa 11", "finalizada"),
@@ -47,7 +38,6 @@ export class CreateTaskComponent implements OnInit{
     return this.tasks.filter(task => task.situacao === situacao)
   }
 }
-
 
 
 class Task {

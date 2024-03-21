@@ -11,3 +11,28 @@
   background: #2d5863;
   border-radius: 20px;
 }
+
+.bg-not-started {
+  background: #C0C0C0;
+}
+
+.bg-card-task {
+  background: #fff;
+}
+
+.border-none-card-header {
+  border-bottom: none;
+}
+
+.button-card {
+  @apply w-full hover:bg-gray-400 font-semibold py-2 px-4 rounded-lg border-dashed border-2;
+}
+
+.button-card-not-started {
+  border-color: #615F5FFF;
+  background-color: #8F8F8FFF;
+}
+
+.text-align-icon-button-card {
+  @apply mb-2;
+}
